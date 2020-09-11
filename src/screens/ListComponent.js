@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 let item = [];
+
 export default ListComponent = React.memo((props) => {
   item = [];
   for (let i in props.obj) {
@@ -8,7 +9,7 @@ export default ListComponent = React.memo((props) => {
       <View
         style={[
           styles.oneContainer,
-          {backgroundColor: props.obj[i] == 0 ? 'green' : 'red'},
+          {backgroundColor: props.obj[i] != 0 ? 'green' : 'red'},
         ]}>
         <Text children={props.obj[i]} />
       </View>,
